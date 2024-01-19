@@ -1,0 +1,42 @@
+<nav>
+  <input type="checkbox" id="check" />
+  <div class="logo">
+    <a href="#">
+      <img src="../../../assets/SVGs/nftpool-logo.svg" alt="" />
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="#/">Marketplace</a>
+    <a href="#/">Artists</a>
+    <a href="#/">Commmunity</a>
+  </div>
+  <label class="ham-burger" for="check">
+    <img src="../../../assets/SVGs/nav.svg" alt="" class="ham" />
+    <img src="../../../assets/SVGs/close.svg" alt="" class="close" />
+  </label>
+  <div class="register">
+    <div class="user-profile-icon" *ngIf="afAuth.user | async">
+      <img
+        src="../../../assets/SVGs/user-profile.svg"
+        alt=""
+        (click)="goToProfile()"
+      />
+    </div>
+    <app-button
+      *ngIf="afAuth.user | async"
+      (btnClick)="logout()"
+      type="{{ 'button' }}"
+      width="{{ '150px' }}"
+      height="{{ '50px' }}"
+      text="{{ 'Logout' }}"
+    ></app-button>
+    <app-button
+      *ngIf="!(afAuth.user | async)"
+      (btnClick)="goToSignUp()"
+      type="{{ 'button' }}"
+      width="{{ '150px' }}"
+      height="{{ '50px' }}"
+      text="{{ 'Register' }}"
+    ></app-button>
+  </div>
+</nav>

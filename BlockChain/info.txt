@@ -1,0 +1,23 @@
+node 1(Private): data\keystore\UTC--2022-10-04T17-26-31.904478200Z--2a0a35ebfe224c7dc827bc30a6abe87bf972679c
+node 1(Public): 0x2a0A35EbFe224c7DC827bc30a6ABe87BF972679c
+Pass: 123456789
+----------------
+Node 2(Public): 0x9b41213A30b29f0b32564F74982c73F7373AC286
+Node 2(Private): data\keystore\UTC--2022-10-04T17-28-52.802483900Z--9b41213a30b29f0b32564f74982c73f7373ac286
+Pass: 1234567890
+----------------
+chain id: 14333
+node1 is administrator block(blockpoa)
+--------------
+enode://7cd957513fb9923967adce2ab284b5284c219f48123ee6c0afc323a68108bf2bf3185d26a4a37e3b29d0d6c036d3746a8f649e6033bbceb6aeae0e81991642a8@127.0.0.1:0?discport=30301
+
+
+
+Node1:->
+geth --networkid 14333 --datadir "./data" --bootnodes enode://7cd957513fb9923967adce2ab284b5284c219f48123ee6c0afc323a68108bf2bf3185d26a4a37e3b29d0d6c036d3746a8f649e6033bbceb6aeae0e81991642a8@127.0.0.1:0?discport=30301 --port 30303 --ipcdisable --syncmode full -http --allow-insecure-unlock --http.corsdomain "*" --http.port 8545 --unlock 0x2a0A35EbFe224c7DC827bc30a6ABe87BF972679c --password ./data/password.txt --mine console
+
+Node2-> 
+geth --networkid 14333 --datadir "./data" --bootnodes enode://7cd957513fb9923967adce2ab284b5284c219f48123ee6c0afc323a68108bf2bf3185d26a4a37e3b29d0d6c036d3746a8f649e6033bbceb6aeae0e81991642a8@127.0.0.1:0?discport=30301 --port 30303 --ipcdisable --syncmode full -http --allow-insecure-unlock --http.corsdomain "*" --http.port 8545 --unlock 0x9b41213A30b29f0b32564F74982c73F7373AC286 --password ./data/password.txt --mine console
+
+
+geth --networkid 14333 --datadir "./data" --bootnodes enode://7cd957513fb9923967adce2ab284b5284c219f48123ee6c0afc323a68108bf2bf3185d26a4a37e3b29d0d6c036d3746a8f649e6033bbceb6aeae0e81991642a8@127.0.0.1:0?discport=30301 --port 30304 --ipcdisable --syncmode full --http --allow-insecure-unlock --http.corsdomain "*" --http.port 8546 --unlock 0x9b41213A30b29f0b32564F74982c73F7373AC286 --password ./data/password.txt console

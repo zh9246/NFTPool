@@ -1,0 +1,28 @@
+=============== Oct 4, 2022 (PKT) ===============
+23:22:53.849661 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+23:22:54.248895 db@open opening
+23:22:54.249604 version@stat F·[] S·0B[] Sc·[]
+23:22:54.281770 db@janitor F·2 G·0
+23:22:54.281770 db@open done T·32.8742ms
+23:22:54.712305 db@close closing
+23:22:54.713303 db@close done T·998.6µs
+=============== Oct 5, 2022 (PKT) ===============
+00:03:49.334551 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:03:49.335548 version@stat F·[] S·0B[] Sc·[]
+00:03:49.335548 db@open opening
+00:03:49.335548 journal@recovery F·1
+00:03:49.341795 journal@recovery recovering @1
+00:03:49.714072 memdb@flush created L0@2 N·626 S·52KiB "\x02d\xfc..\x19Ba,v431":"\xfe\x88\xcf..H\xef\xcc,v363"
+00:03:49.718491 version@stat F·[1] S·52KiB[52KiB] Sc·[0.25]
+00:03:49.841535 db@janitor F·3 G·0
+00:03:49.841535 db@open done T·505.9875ms
+=============== Oct 5, 2022 (PKT) ===============
+00:05:38.105703 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+00:05:38.112047 version@stat F·[1] S·52KiB[52KiB] Sc·[0.25]
+00:05:38.112047 db@open opening
+00:05:38.112047 journal@recovery F·1
+00:05:38.115679 journal@recovery recovering @3
+00:05:38.481829 memdb@flush created L0@5 N·267 S·11KiB "Dat..ion,v629":"unc..own,v634"
+00:05:38.488447 version@stat F·[2] S·63KiB[63KiB] Sc·[0.50]
+00:05:38.582981 db@janitor F·4 G·0
+00:05:38.582981 db@open done T·470.9341ms
